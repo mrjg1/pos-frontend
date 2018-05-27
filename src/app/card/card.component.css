@@ -1,0 +1,59 @@
+.shop-card {
+    width: 150px;
+    height: 170px;
+    background: #8c978f;
+    color: #302e2e;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 25px;
+    text-align: center;
+}
+  .shop-card .title {
+    height: 30%;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #22231f;
+    overflow: auto;
+    width: 110%;
+    margin-left: -6px;
+    margin-top: -12px;
+  }
+  .shop-card .desc {
+    height: 53%;
+    font-size: 13px;
+    opacity: .8;
+    overflow: auto;
+    word-wrap: break-word;
+    border-top: 1px solid #3e463c;
+    border-bottom: 1px solid #3e463c;
+  }
+  
+  .shop-card .btn {
+    margin-top: 6%;
+    background-color: #3e463c;
+    color: #8c978f;
+    font-weight: 500;
+    border: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: body-background 0.3s ease-in-out;
+}
+.shop-card .btn:hover{
+    background: #46473c;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.562); 
+    border-radius: 1px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(62, 73, 54, 0.849); 
+    border-radius: 1px;
+}

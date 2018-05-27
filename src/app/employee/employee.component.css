@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+  }
+  
+  input {
+    border: none;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1em;
+    padding: 0;
+  }
+  
+  
+  after { clear: both; }
+  
+  .placeholder::-webkit-input-placeholder {
+      color: #8c978f;
+  }
+.navigator{
+  position: absolute;
+  margin-top: 5.9%;
+  margin-left: 2%;
+}
+#productsection{
+    width:60%;
+    float: left
+}
+
+#productsection form #search{
+    margin-top: 9.5%;
+    margin-left: 7.5%;
+}
+
+#productsection form #productSearchbox {
+    background-color: #3e463c;
+    border-radius: 3px 0px 0px 3px;
+    border-right: 1px solid #8c978f;
+    color: #8c978f;
+    display: block;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 11%;
+}
+#productsection form input[type="text"] {
+    background-color: #3e463c;
+    color: #8c978f;
+    border-radius: 0px 3px 3px 0px;
+    padding: 0 16px;
+    width: 420px;
+    height: 40px;
+}
+
+#productsection #products-block{
+    margin: 6%;
+    height: 548px;
+    overflow: auto;
+}
+#productsection #products{
+    float: left; 
+    margin: 2%; 
+    margin-bottom: 5%;
+}
+
+#customerSection{
+    margin-top: 4%;
+    margin-left: -4%;
+    width: 40%;
+    float: left;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgba(128, 128, 128, 0.562); 
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background: #3e463c; 
+    border-radius: 3px;
+}

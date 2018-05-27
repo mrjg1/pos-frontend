@@ -1,0 +1,96 @@
+<div>
+  <div class="navigator">
+    <app-navigator [username]="username"></app-navigator>
+  </div>
+  <div id="checkout">
+    <form class="form">
+      <h3 id="title">Cart</h3>
+
+      <div class="detail">
+        <span class="box fontawesome-user"></span>
+        <div class="info">{{customer.name}}
+          <br/> {{customer.email}}
+        </div>
+      </div>
+      <div>
+        <table class="table">
+          <thead id="tablehead">
+            <tr>
+              <th>S.No.</th>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Rate</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cartItem of cart; let index=index">
+              <td>{{index+1}}</td>
+              <td id="product">{{cartItem.product.name}}</td>
+              <td id="quantity">{{cartItem.quantity}}</td>
+              <td>${{cartItem.product.price}}</td>
+              <td>${{cartItem.quantity*cartItem.product.price}}</td>
+            </tr>
+            <tr class="border">
+              <td>
+                <strong>Subtotal</strong>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>${{cartTotal}}</td>
+            </tr>
+            <tr class="border">
+              <td>
+                <strong>Tax</strong>
+              </td>
+              <td></td>
+              <td></td>
+              <td>
+              </td>
+              <td>$10</td>
+            </tr>
+            <tr class="border">
+              <td>
+                <strong>Grand Total</strong>
+              </td>
+              <td></td>
+              <td></td>
+              <td>
+              </td>
+              <td>
+                <b>${{cartTotal+10}}</b>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
+  <div id="payment">
+    <form class="form">
+      <h3 id="title">Checkout and Payment Method</h3>
+      <div class="detail">
+        <span class="box fontawesome-shopping-cart"></span>
+        <div class="info" style="line-height: 45px;">Sales Executive:
+          <strong>{{username}}</strong>
+        </div>
+      </div>
+      <div class="payment-option">
+        <div class="payment-position">
+          <b>Payment</b>
+        </div>
+        <div class="payment-position">
+          <input type="radio" id="cash" [(ngModel)]="paymentMode" name="payment-mode" value="Cash" checked/>
+          <label for="cash">Cash</label>
+          <input type="radio" id="card" [(ngModel)]="paymentMode" name="payment-mode" value="Card" />
+          <label for="card">Card</label>
+        </div>
+      </div>
+      <div class="button-group">
+        <button class="save-order" (click)="saveOrder()">Save Order</button>
+        <button class="place-order" (click)="placeOrder(paymentMode)">Place Order</button>
+      </div>
+    </form>
+  </div>
+</div>

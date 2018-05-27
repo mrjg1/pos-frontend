@@ -1,0 +1,47 @@
+<div id="login">
+  <h3 id="title">Gadget Store</h3>
+  <div *ngIf="!loggedUser">
+    <form #formlogin (submit)="formSubmit(username, password, secret); formlogin.reset()">
+      <span class="fontawesome-user"></span>
+      <input type="text" id="user" placeholder="Username" [(ngModel)]="username" name="username" />
+
+      <span class="fontawesome-lock"></span>
+      <input type="password" id="pass" placeholder="Password" [(ngModel)]="password" name="password" />
+
+      <div *ngIf="signup">
+        <span class="fontawesome-key"></span>
+        <input type="password" id="secret" placeholder="Secret Key" [(ngModel)]="secret" name="secret" />
+      </div>
+
+      <div *ngIf="!signup">
+        <input type="submit" value="Login">
+        <div id="divLink">
+          <a (click)="signUpForm()">Create New Account</a>
+        </div>
+      </div>
+      <div *ngIf="signup">
+        <input type="submit" value="Sign Up">
+        <div id="divLink">
+          <a (click)="cancel()">Cancel</a>
+        </div>
+      </div>
+      <div *ngIf="alert_type">
+        <div style="margin-top: 5%; margin-bottom: -5%">
+          <app-alert [alertType]="alert_type" [alertMessage]="alert_message"></app-alert>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="loggedUser">
+    <form #cashForm (submit)="cashSubmit(cashBalance)">
+      <span class="fontawesome-money"></span>
+      <input type="number" id="cash" placeholder="Cash Balance" [(ngModel)]="cashBalance" name="cashBalance" />
+      <input type="submit" value="Submit">
+      <div *ngIf="alert_type">
+        <div style="margin-top: 5%; margin-bottom: -5%">
+          <app-alert [alertType]="alert_type" [alertMessage]="alert_message"></app-alert>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

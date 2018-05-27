@@ -1,0 +1,63 @@
+<div *ngIf="cart && cart.length>0">
+  <div>
+    <h3 id="title">Cart
+      <button id="clear" (click)="clearCart()">Clear</button>
+    </h3>
+
+  </div>
+  <table class="table">
+    <thead id="tablehead">
+      <tr>
+        <th>S.No.</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Rate</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cartItem of cart; let index=index">
+        <td>{{index+1}}</td>
+        <td id="product" *ngIf="cartItem.product">{{cartItem.product.name}}</td>
+        <td id="quantity">
+          <button class="button-decrement" (click)="decrementCart(cartItem)">-</button>
+          {{cartItem.quantity}}
+          <button class="button-increment" (click)="incrementCart(cartItem)">+</button>
+        </td>
+        <td *ngIf="cartItem.product">${{cartItem.product.price}}</td>
+        <td *ngIf="cartItem.product">${{cartItem.quantity*cartItem.product.price}}</td>
+      </tr>
+      <tr class="border">
+        <td>
+          <strong>Subtotal</strong>
+        </td>
+        <td></td><td></td><td></td>
+        <td>${{total}}</td>
+      </tr>
+      <tr class="border">
+        <td>
+          <strong>Tax</strong>
+        </td>
+        <td></td><td></td><td></td>
+        <td>$10</td>
+      </tr>
+      <tr class="border">
+        <td>
+          <strong>Grand Total</strong>
+        </td>
+        <td></td><td></td><td></td>
+        <td>${{total+10}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button id="checkout" (click)="checkoutCustomer()">
+    <span id="checkout-word">
+      <b>CHECKOUT</b>
+    </span>
+    <span id="checkout-total">$ {{total+10}}
+    </span>
+  </button>
+</div>
+<div *ngIf="!cart || cart.length<=0">
+  <h3 id="title-empty-cart">Cart is Empty</h3>
+</div>

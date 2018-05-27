@@ -1,0 +1,95 @@
+<div id="placed-orders">
+  <div class="navigator">
+    <app-navigator [username]="username"></app-navigator>
+  </div>
+  <div class="form" *ngIf="!orderView">
+    <h3 class="orders-title">Placed Orders</h3>
+    <div class="orders-list" *ngIf="groupedOrderList">
+      <ul *ngFor="let orderGroup of groupedOrderList">
+        <div class="order-date">
+          <li>{{orderGroup.key}}</li>
+        </div>
+        <div class="order" *ngIf="orderGroup.value">
+          <div class="order-border" *ngFor="let orderItem of orderGroup.value">
+            <li (click)="viewOrder(orderItem)" *ngIf="orderItem.customer">#{{orderItem.orderNumber}}
+              <span class="order-time">{{orderItem.orderTime}}</span>
+              <span class="order-total">${{orderItem.total}}</span>
+              <br/> {{orderItem.customer.name}}
+
+              <span class="order-status">{{orderItem.orderStatus}}</span>
+            </li>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div class="form" *ngIf="orderView">
+    <h3 class="order-title">Order
+      <b>#{{selectedOrder[0].orderNumber}}</b>
+      <br/>
+      <span class="order-detail-date">Created Date:
+        <b>{{selectedOrder[0].orderDate}} {{selectedOrder[0].orderTime}}</b>
+      </span>
+      <br/>
+      <span class="order-detail-status">Status: {{selectedOrder[0].orderStatus}}</span>
+    </h3>
+    <div id="paymentDetail">
+      <span id="paymentbox" class="fontawesome-money"></span>
+      <div id="paymentinfo">Mode of Payment:
+        <b>{{selectedOrder[0].paymentMethod}}</b>
+      </div>
+    </div>
+    <table class="table">
+      <thead id="tablehead">
+        <tr>
+          <th>S.No.</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Rate</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cartItem of selectedOrder; let index=index">
+          <td>{{index+1}}</td>
+          <td id="product" *ngIf="cartItem.product">{{cartItem.product.name}}</td>
+          <td id="quantity">
+            {{cartItem.quantity}}
+          </td>
+          <td *ngIf="cartItem.product">${{cartItem.product.price}}</td>
+          <td *ngIf="cartItem.product">${{cartItem.quantity*cartItem.product.price}}</td>
+        </tr>
+        <tr class="border">
+          <td>
+            <strong>Subtotal</strong>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>${{selectedOrder[0].total-10}}</td>
+        </tr>
+        <tr class="border">
+          <td>
+            <strong>Tax</strong>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>$10</td>
+        </tr>
+        <tr class="border">
+          <td>
+            <strong>Grand Total</strong>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <b>${{selectedOrder[0].total}}</b>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="back" (click)="back()">Back</button>
+  </div>
+</div>

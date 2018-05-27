@@ -1,0 +1,9 @@
+<div class="shop-card">
+  <div class="title">{{product.name}}</div>
+  <div class="desc">{{product.description}}</div>
+  <div class="cta">
+    <div>Price: ${{product.price}}</div>
+    <div>Stock: {{product.stock}}</div>
+    <button class="btn" (click)="addProduct()">Add to Cart</button>
+  </div>
+</div>

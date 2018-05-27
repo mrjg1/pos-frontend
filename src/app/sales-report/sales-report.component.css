@@ -1,0 +1,75 @@
+
+
+input {
+  border: none;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  padding: 0;
+}
+
+
+after { clear: both; }
+
+#title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 100;
+  text-align: center;
+  margin-left: 15%;
+  color: #6c755d;
+}
+#sales {
+  margin: 12% auto;
+  width: 320px;
+}
+
+#sales form {
+  margin: auto;
+  padding: 22px 22px 22px 22px;
+  width: 100%;
+  border-radius: 5px;
+  background: #2b2e31;
+  border-top: 1px solid #464b3f;
+  border-bottom: 1px solid #464b3f;
+  border-left: 1px solid #464b3f;
+  border-right: 1px solid #464b3f;
+}
+
+#sales form span {
+  background-color: #363b41;
+  border-radius: 3px 3px 3px 3px;
+  border-right: 3px solid #4e5358;
+  color: #606468;
+  display: block;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+#sales form input[type="date"] {
+  background-color: #3b4148;
+  border-radius: 0px 3px 3px 0px;
+  color: #a9a9a9;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 235px;
+  height: 50px;
+}
+
+#sales form input[type="submit"] {
+  background: #b5cd60;
+  border: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: body-background 0.3s ease-in-out;
+}
+#sales form input[type="submit"]:hover {
+  background: #cfba73;
+}
+

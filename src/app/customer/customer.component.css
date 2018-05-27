@@ -1,0 +1,136 @@
+@charset "utf-8";
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+input {
+  border: none;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1em;
+  padding: 0;
+}
+
+
+after { clear: both; }
+
+.placeholder::-webkit-input-placeholder {
+    color: #2e302e;
+}
+#customer {
+  width: 40%;
+}
+
+#customer form {
+  margin: auto;
+  margin-left: 25%;
+  padding: 22px 22px 22px 22px;
+  width: 480px;
+  border-radius: 5px;
+  background: #2b2e31;
+  border-top: 1px solid #464b3f;
+  border-bottom: 1px solid #464b3f;
+  border-left: 1px solid #464b3f;
+  border-right: 1px solid #464b3f;
+}
+
+#customer form #searchbox {
+  background-color: #8c978f;
+  border-radius: 3px 0px 0px 3px;
+  border-right: 1px solid #4e5358;
+  color: #302e2e;
+  display: block;
+  float: left;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 13%;
+}
+
+#customer form #addbox {
+    background-color: #879948;
+    border-radius: 3px 3px 3px 3px;
+    color: #3b3a3a;
+    display: block;
+    float: right;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 13%;
+  }
+
+#customer form input[type="text"] {
+  background-color: #8c978f;
+  border-radius: 0px 3px 3px 0px;
+  color: #302e2e;
+  padding: 0 16px;
+  width: 235px;
+  height: 40px;
+}
+
+#customer ul{
+  list-style-type: none;
+  width: 70%;
+  border-radius: 3px 3px 3px 3px;
+  color: #a5a9ad5b;
+  padding: 0 16px;
+  margin-left: 12%;
+}
+
+#customer li:hover{
+    cursor: pointer;
+    background-color: #cec6c613;
+}
+
+#customer form #addbox:hover{
+    cursor: pointer;
+}
+
+#customer form #customerDetail{
+    margin-top: 4%;
+    margin-left: 13%; 
+    border-radius: 3px 3px 3px 3px;
+    background-color: #8c978f;
+    color: #373a36;
+    width: 74.2%;
+    height: 45px;
+}
+
+#customer form #customerbox{
+  background-color: #545c54b6;
+  border-radius: 3px 0px 0px 3px;
+  color: #36383a;
+  display: block;
+  float: left;
+  line-height: 45px;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 2%;
+}
+
+#customer #customerDetail img{
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin-top: 3%;
+    margin-right: 4.8%;
+}
+
+#customer #customerDetail img:hover{
+    cursor: pointer;
+}
+
+#customer #customerDetail #customerinfo{
+    margin-top: 0.02%; 
+    margin-left: 3.5%; 
+    position: absolute;
+}
+
+.swal-button:focus {
+  box-shadow: none;
+}

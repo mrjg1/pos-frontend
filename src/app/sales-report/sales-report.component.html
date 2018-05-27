@@ -1,0 +1,18 @@
+<div id="sales">
+  <h3 id="title">Sales Report</h3>
+  <form #formsales (submit)="formSubmit(from, to); formsales.reset()">
+    <span>From</span>
+    <input type="date" id="from" [(ngModel)]="from" name="from" />
+
+    <span>To %nbsp;</span>
+    <input type="date" id="to" [(ngModel)]="to" name="to" />
+
+    <input type="submit" value="Download">
+
+    <div *ngIf="alert_type">
+      <div style="margin-top: 5%; margin-bottom: -5%">
+        <app-alert [alertType]="alert_type" [alertMessage]="alert_message"></app-alert>
+      </div>
+    </div>
+  </form>
+</div>

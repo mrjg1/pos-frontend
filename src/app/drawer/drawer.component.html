@@ -1,0 +1,32 @@
+<div id="drawer">
+  <div class="navigator">
+    <app-navigator [username]="username"></app-navigator>
+  </div>
+  <div class="form">
+    <h3 class="title">Drawer Details</h3>
+    <div class="drawer-list">
+      <ul>
+        <div>
+          <div class="drawer-start" *ngIf="startingDrawer">
+              <li>Starting Balance
+                  <span class="order-date"> {{startingDrawer[0].orderDate}}</span>
+                  <span class="order-total">${{startingDrawer[0].orderTotal}}</span>
+              </li>
+          </div>
+          <div class="drawer-border drawer" *ngFor="let drawerItem of drawer">
+            <li>#{{drawerItem.orderNumber}}
+              <span class="order-date">{{drawerItem.orderDate}}</span>
+              <span class="order-total">+ ${{drawerItem.orderTotal}}</span>
+            </li>
+          </div>
+          <div class="drawer-close" *ngIf="closingDrawer">
+              <li>Closing Balance
+                  <span class="order-date"> {{closingDrawer[0].orderDate}}</span>
+                  <span class="order-total"> ${{closingDrawer[0].orderTotal}}</span>
+              </li>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>

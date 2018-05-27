@@ -1,0 +1,25 @@
+<div id="addCustomer">
+  <form #addCustomerForm (submit)="customerFormSubmit(name, email, mobile, address); addCustomerForm.reset()">
+    <span class="fontawesome-user"></span>
+    <input type="text" id="name" placeholder="Customer Name" [(ngModel)]="name" name="name" />
+
+    <span class="fontawesome-envelope"></span>
+    <input type="email" id="email" placeholder="Email" [(ngModel)]="email" name="email" />
+
+    <span class="fontawesome-phone-sign"></span>
+    <input type="number" id="mobile" placeholder="Mobile Number" [(ngModel)]="mobile" name="mobile" />
+
+    <span class="fontawesome-home"></span>
+    <input type="text" id="address" placeholder="Address" [(ngModel)]="address" name="address" />
+
+    <input type="submit" value="Add Customer">
+    <div id="divLink">
+      <a (click)="cancel()">Cancel</a>
+    </div>
+    <div *ngIf="alert_type">
+        <div style="margin-top: 20%; margin-bottom: -15%">
+          <app-alert [alertType]="alert_type" [alertMessage]="alert_message"></app-alert>
+        </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+<div id="customer">
+  <form #searchForm>
+    <span id="searchbox" class="fontawesome-search"></span>
+    <input type="text" class="placeholder" [(ngModel)]="keyword" name="keyword" placeholder="Search Customers" (keyup)="search(keyword)">
+    <span id="addbox" class="fontawesome-plus" (click)="addNewCustomer()"></span>
+    <ul *ngIf="customers && customers.length>0">
+      <li *ngFor="let c of customers" (click)="setCustomer(c); searchForm.reset();">
+        <span>{{c.name}}</span>
+        <span style="float: right">{{c.email}}</span>
+      </li>
+    </ul>
+    <div *ngIf="addCustomer">
+      <app-add-customer (result)="addCustomerCancel($event)"></app-add-customer>
+    </div>
+    <div *ngIf="customer && !addCustomer">
+      <div id="customerDetail">
+        <span id="customerbox" class="fontawesome-user"></span>
+        <div id="customerinfo">{{customer.name}}
+        <br/> {{customer.email}}
+        </div>
+        <img src="../../assets/images/delete-sign.png" (click)="removeCustomer()"/><br/>
+      </div>
+      <app-cart [customer]="customer" [cart]="cart" (increment)="incrementCustomerCart($event)" (decrement)="decrementCustomerCart($event)" (clear)="clearCustomerCart($event)"></app-cart>
+    </div>
+  </form>
+</div>

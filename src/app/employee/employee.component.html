@@ -1,0 +1,22 @@
+<div>
+  <div class="navigator">
+    <app-navigator [username]="username"></app-navigator>
+  </div>
+  <div id="productsection">
+    <form>
+      <div id="search">
+        <span id="productSearchbox" class="fontawesome-search"></span>
+        <input type="text" class="placeholder" [(ngModel)]="productKeyword" name="productKeyword" placeholder="Search Products" (keyup)="search(productKeyword)">
+      </div>
+      <div id="products-block" *ngIf="productList">
+        <div id="products" *ngFor="let product of productList">
+          <app-card [product]="product" (addToCart)="addProduct($event)"></app-card>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="customerSection">
+    <app-customer (setCustomerParent)="setCustomer($event)" [cart]="cart" (increment)="increment($event)" (decrement)="decrement($event)"
+      (clear)="clear($event)"></app-customer>
+  </div>
+</div>

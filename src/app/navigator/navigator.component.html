@@ -1,0 +1,18 @@
+<div class="dropdown">
+  <button class="dropbtn">
+    <span class="fontawesome-user"></span>
+    <span style="float: right;">{{username}}
+      <span class="fontawesome-caret-down"></span>
+    </span>
+  </button>
+  <div class="dropdown-content">
+    <a class="nav-link" [routerLink]="['/employee']">Home</a>
+    <a class="nav-link" [routerLink]="['/employee/placed']">Placed Orders</a>
+    <a class="nav-link" [routerLink]="['/employee/saved']">Saved Orders</a>
+    <a class="nav-link" [routerLink]="['/employee/drawer']">Drawer Detail</a>
+    <a class="nav-link" [routerLink]="['/employee/sales-report']">Sales Report</a>
+    <a (click)="logout()">Logout
+      <span class="fontawesome-signout"></span>
+    </a>
+  </div>
+</div>

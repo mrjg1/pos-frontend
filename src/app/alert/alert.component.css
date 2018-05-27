@@ -1,0 +1,53 @@
+@charset "utf-8";
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+  }
+  
+.fade.in {
+    opacity: 1;
+}
+.alert-success {
+    color: #4a914b;
+    background-color: #5b6d5b6c;
+    border-color: #d6e9c6;
+}
+.alert-error {
+    color: #be4949;
+    background-color: #6d5b5b38;
+    border-color: #e9c6c6;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+
+#alert-message{
+    text-align: center;
+}

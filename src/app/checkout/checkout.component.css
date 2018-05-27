@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+input {
+  border: none;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1em;
+  padding: 0;
+}
+
+
+after { clear: both; }
+
+.placeholder::-webkit-input-placeholder {
+    color: #2e302e;
+}
+.navigator{
+    position: absolute;
+    margin-top: 5.9%;
+    margin-left: 2%;
+}
+#checkout {
+  width: 50%;
+  margin-top: 10%;
+  float:left;
+}
+
+.form {
+  margin: auto;
+  margin-left: 25%;
+  padding: 22px 22px 22px 22px;
+  width: 480px;
+  border-radius: 5px;
+  background: #2b2e31;
+  border-top: 1px solid #464b3f;
+  border-bottom: 1px solid #464b3f;
+  border-left: 1px solid #464b3f;
+  border-right: 1px solid #464b3f;
+}
+
+.detail{
+    margin-top: 4%;
+    border-radius: 3px 3px 3px 3px;
+    background-color: #8c978f;
+    color: #373a36;
+    width: 100%;
+    height: 45px;
+}
+
+.box{
+  background-color: #545c54b6;
+  border-radius: 3px 0px 0px 3px;
+  color: #36383a;
+  display: block;
+  float: left;
+  line-height: 45px;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+}
+
+.info{
+    margin-top: 0.02%; 
+    margin-left: 3.5%; 
+    position: absolute;
+}
+
+.table {
+    margin-top: 1%;
+    border-radius: 5px;
+    background-color:#8c978f;
+    border-collapse: collapse;
+    color: #302e2e;
+    width: 100%;
+}
+#title {
+    margin-top: 5%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #6c755d;
+    text-align: center;
+  }
+
+#tablehead tr {
+    background-color:#545c54b6;
+    color: #3b3a3a;
+}
+th:first-child{
+    border-top-left-radius: 5px;
+}
+th:last-child{
+    border-top-right-radius: 5px;
+}
+th, td {
+    padding: 4px;
+    text-align: center;
+}
+tr, td{
+    color: #373a36;
+}
+
+
+.border{
+    border-top: 1px solid #3e463c1f;
+}
+#product{
+    width:160px;
+}
+
+#quantity{
+    width: 100px;
+}
+
+#payment {
+    width: 50%;
+    margin-top: 10%;
+    float:left;
+    margin-left: -10%;
+  }
+  
+.payment-option{
+    margin-top: 1%;
+    border-radius: 5px;
+    background-color:#8c978f;
+    color: #302e2e;
+    width: 100%;
+    height: 160px;
+}
+ .payment-position{
+    padding-top: 2%; 
+    margin-left: 6%;
+ }
+
+ .button-group{
+     margin-top: 4%;
+     padding-bottom: 6%; 
+ }
+ .save-order{
+    background-color: #b4aa71;
+    border-radius: 3px 3px 3px 3px;
+    color: #3b3a3a;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    border: 0px;
+    float: left;
+    cursor: pointer;
+ }
+
+ .place-order {
+    background-color: #879948;
+    border-radius: 3px 3px 3px 3px;
+    color: #3b3a3a;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    border: 0px;
+    float: right;
+    cursor: pointer;
+ }
